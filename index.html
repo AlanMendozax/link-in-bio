@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+ <html lang="en">
+     <head>
+         <meta charset="UTF-8"/>
+         <meta name="viewport" content="width=device-width", initial-scale="1.0"/>
+         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+         <title>Alan Raymundo Alcala Mendoza | Business card</title>
+         <link href="https://fonts.googleapis.com/css?family=Cairo:300,400,700&display=swap" rel="stylesheet"/>
+         <link rel="stylesheet" href="11-resources/01-css/style.css"/>
+         <link rel="icon" href="11-resources/02-img/am tech 3.ico" size="70x32" type="image/x-icon"/>
+         <script src="11-resources/05-js/script.js" defer></script>
+        <!--  <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyDOoUZWHoQwNSfK8x71zMm4PtauF9Hzyf8",
+              authDomain: "alanmendozabusinesscard.firebaseapp.com",
+              projectId: "alanmendozabusinesscard",
+              storageBucket: "alanmendozabusinesscard.appspot.com",
+              messagingSenderId: "1035843410126",
+              appId: "1:1035843410126:web:46b2cef8b6882043f8589f",
+              measurementId: "G-CS2VH7P7D1"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+         </script> -->
+     </head>
+     <body class="dark:bg-gray-800 transition-colors duration-300">
+        <button class="toggleBtn md:w-12 md:h-6 sm:w-12 sm:h-6 border-white bg-transparent dark:hover:bg-gray-800
+        dark:bg-white" onclick="toggleTheme()">
+		   <div
+            id="switch-toggle"
+            class="md:w-7 md:h-7 sm:w-7 sm:h-7 border-white bg-transparent -translate-x-2 dark:bg-gray-800">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4
+                12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16
+                12a4 4 0 11-8 0 4 4 0 018 0z" fill="#fff"/>
+			</svg>
+		   </div>
+		 </button>
+         <div class="card dark:bg-white">
+             <div class="image-box">
+                 <img class="profile-image" src="11-resources/02-img/amtech.png" alt="Avatar">
+             </div>
+             <div class="bottom dark:text-white">
+                 <div class="btn dark:bg-gray-800 dark:hover:bg-black" onclick="toggleActive()">
+                     <div class="btn-text">
+                         <span>More</span><span>Close</span>
+                     </div>
+                 </div>
+                 <div class="name">Alan Mendoza</div>
+                 <div class="designation">Software Engineer</div>                 
+             </div>
+             <div class="social">
+                 <p>Follow me&#58;</p>
+                 <div class="social-links">
+                     <a href="https://www.linkedin.com/in/alan-raymundo-alcal%C3%A1-mendoza-61525121a/" target="_blank">
+                         <img src="11-resources/02-img/logotipo-de-linkedin.svg" alt="LinkedIn"/>
+                     </a>
+                     <a href="https://github.com/AlanMendozax" target="_blank">
+                         <img src="11-resources/02-img/signo-de-github.svg" alt="Github"/>
+                     </a>
+                     <a href="#">
+                         <img src="11-resources/02-img/global.svg" alt="Portfolio"/>
+                     </a>
+                     <a href="https://twitter.com/AlanMendoza_ra" target="_blank">
+                         <img src="11-resources/02-img/x-social-media-white-icon.svg" alt="X-Social"/>
+                     </a>
+                     <a href="https://www.instagram.com/alanm.ra/" target="_blank">
+                         <img src="11-resources/02-img/instagram.svg" alt="Instagram"/>
+                     </a>
+                 </div>
+                 <a class="email" href="mailto:alanm9801@gmail.com">Email</a>
+             </div>
+         </div>
+     </body>
+ </html>
