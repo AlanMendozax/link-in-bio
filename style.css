@@ -1,0 +1,275 @@
+:root {
+  --gradient: linear-gradient(90deg, #df54a7 0%, #7571ac 100%);
+  --long: 0.7s;
+  --short: 0.2s;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background: var(--gradient);
+}
+.card {
+  width: 300px;
+  height: 470px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  display: grid;
+  grid-template-rows: auto 100px;
+  box-shadow: 0 20px 30px #00000080;
+  position: relative;
+  overflow: hidden;
+}
+.image-box {
+  width: 300px;
+  position: relative;
+}
+.profile-image {
+  position: absolute;
+  height: 100%;
+  left: 51%;
+  transform: translateX(-50%);
+  transition: var(--long);
+}
+.bottom {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  width: 300px;
+  position: relative;
+  color: #363636;
+}
+.name {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 26px;
+  z-index: 1;
+  transition: var(--long);
+}
+.designation {
+  margin-top: 5px;
+  font-size: 18px;
+  line-height: 14px;
+  z-index: 1;
+  transition: var(--long);
+}
+.btn {
+  padding-top: 4px;
+  position: absolute;
+  width: 105px;
+  height: 38px;
+  background: var(--gradient);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  z-index: 2;
+  transition: var(--long);
+}
+.btn-text {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  transition: var(--long);
+}
+.btn:hover {
+  background: #696969;
+}
+.social {
+  padding: 20px;
+  position: absolute;
+  background-color: transparent;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  transition: var(--long);
+}
+.social p {
+  margin-top: 160px;
+  height: fit-content;
+  padding: 0 10px;
+}
+.social-links {
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.social-links a {
+  transition: var(--short);
+}
+a:hover {
+  transform: translateY(-5px);
+}
+.social-links img {
+  width: 35px;
+}
+.email {
+  width: 100px;
+  height: 40px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--short);
+}
+.card.active .name,
+.card.active .designation {
+  color: #fff;
+  transform: translateY(-360px);
+}
+.card.active .btn {
+  transform: translate(-50%, 30px);
+}
+.card.active .email {
+  width: 200px;
+  background-color: #ffffff40;
+}
+.card.active .profile-image {
+  height: 400px;
+}
+.card.active .btn-text {
+  transform: translateY(-30px);
+}
+.card.active .social {
+  top: 0;
+  background-color: #000000cc;
+}
+
+/* ToggleBtn dark mode*/
+
+.toggleBtn{
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 2.5rem;
+    height: 1.25rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 9px #00000080;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+.toggleBtn:hover{
+    background-color: rgba(255, 255, 255, 0.075);
+}
+#switch-toggle{
+    position: relative;
+    width: 1.5rem ;
+    height: 1.5rem;
+    border-radius: 9999px;
+    padding: 0.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+@media (min-width: 768px) {
+  .toggleBtn.md\:w-12 {
+    width: 3rem;
+  }
+  .toggleBtn.md\:h-6 {
+    height: 1.5rem;
+  }
+  #switch-toggle.md\:w-7 {
+    width: 1.75rem;
+  }
+  #switch-toggle.md\:h-7 {
+    height: 1.75rem;
+  }
+}
+@media (min-width: 640px) {
+    .toggleBtn.sm\:w-12 {
+        width: 3rem;
+    }
+    .toggleBtn.sm\:h-6 {
+        height: 1.5rem;
+      }
+      #switch-toggle.sm\:w-7 {
+        width: 1.75rem;;
+      }
+      #switch-toggle.sm\:h-7 {
+        height: 1.75rem;;
+      }
+}
+.border-white {
+  --tw-text-opacity: 1;
+  border: 1px solid white;
+}
+.bg-transparent {
+  background-color: #7571ac;
+}
+  .-translate-x-2 {
+  --tw-translate-x: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-full{
+    transform: translateX(1.2rem) rotate(360deg);
+}
+body:is(.dark .dark\:bg-gray-800) {
+    --tw-bg-opacity: 1;
+    background: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+.transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+button:is(.dark .dark\:bg-white) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+button:is(.dark .dark\:hover\:bg-gray-800:hover) {
+    --tw-bg-opacity: 1;
+    background-color:  #ffffff80;
+}
+#switch-toggle:is(.dark .dark\:bg-gray-800) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.card:is(.dark .dark\:bg-white){
+    background-color: #ffffff26;
+}
+
+.bottom:is(.dark .dark\:text-white){
+    color: #fff;
+}
+.btn:is(.dark .dark\:bg-gray-800) {
+    --tw-bg-opacity: 1;
+    background: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+.btn:is(.dark .dark\:hover\:bg-black:hover){
+    --tw-bg-opacity: 1;
+    background: #171a4a; /* Azul del logo = #00006c*/
+}
